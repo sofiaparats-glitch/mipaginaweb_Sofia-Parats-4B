@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #12161f;
+    color: #e0e6ed;
+    padding: 30px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #38bdf8;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #38bdf8;
+    font-size: 1.4rem;
+}
+
+section {
+    background: #1e293b;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.flex-container {
+    display: flex;
+    gap: 10px;
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 15px;
+    min-height: 100px;
+}
+
+.flex-item {
+    background: #0284c7;
+    color: #f8fafc;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.flex-item:hover {
+    transform: scale(1.05);
+    background: #38bdf8;
+}
+
+#ejemplo1 {
+    flex-direction: row;
+}
+
+#ejemplo2 {
+    flex-direction: column;
+}
+
+#ejemplo3 {
+    justify-content: space-between;
+}
+
+#ejemplo4 {
+    justify-content: center;
+}
+
+#ejemplo5 {
+    align-items: center;
+    height: 150px;
+}
+
+#ejemplo6 {
+    flex-wrap: wrap;
+}
+
+#ejemplo6 .flex-item {
+    flex: 0 0 calc(33.333% - 10px);
+}
+
+#ejemplo7 .flex-item:nth-child(1) {
+    flex: 1;
+}
+
+#ejemplo7 .flex-item:nth-child(2) {
+    flex: 2;
+}
+
+#ejemplo7 .flex-item:nth-child(3) {
+    flex: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 15px 25px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+/* Ajuste del tamaño del logo (MODIFICADO: reducido a 35px) */
+.navbar .logo img,
+.logo img {
+    height: 35px; 
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    align-items: center;
+}
+
+.navbar .nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.navbar .nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* --- TARJETAS E IMÁGENES --- */
+.card-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 250px;
+    background: #0f172a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.25);
+}
+
+/* Controla el alto del contenedor de imagen (MODIFICADO: reducido a 120px) */
+.card-img {
+    height: 120px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Controla la imagen dentro de la tarjeta */
+.card-img img,
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.card-body button {
+    margin-top: 15px;
+    background: #0284c7;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.card-body button:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.centered-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background: #0f172a;
+    border-radius: 12px;
+}
+
+.centered-content {
+    background: #0284c7;
+    padding: 30px 50px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.prop-tag {
+    display: inline-block;
+    background: #0284c7;
+    color: #f8fafc;
+    font-family: monospace;
+    font-size: 0.85rem;
+    padding: 4px 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* --- FORMULARIOS --- */
+form {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 2px solid #0284c7;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background: #12161f;
+}
+
+legend {
+    color: #38bdf8;
+    font-weight: bold;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    background: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    color: #fff;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #64748b;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: #38bdf8;
+}
+
+fieldset div div {
+    margin-bottom: 15px;
+}
+
+fieldset div div label {
+    display: inline-block;
+    margin-right: 15px;
+    font-weight: normal;
+}
+
+button[type="submit"],
+button[type="reset"] {
+    background: #0284c7;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-right: 10px;
+    transition: background 0.2s, color 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+button[type="reset"] {
+    background: #334155;
+    color: #f8fafc;
+}
+
+button[type="reset"]:hover {
+    background: #475569;
+}
+
+form a {
+    color: #38bdf8;
+    text-decoration: underline;
+}
+
+/* --- GRID Y CAJAS --- */
+.contenedor-cajas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.caja {
+    background: #0f172a;
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 4px solid #0284c7;
+}
+
+.caja h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.caja p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #94a3b8;
+}

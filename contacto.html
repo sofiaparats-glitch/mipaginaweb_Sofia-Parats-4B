@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    </style>
+</head>
+<body>
+
+    <div class="centro">
+        <img src="img/banner-handball.jfif" alt="Banner" class="banner">
+    </div>
+
+    <h1 class="centro">Contacto e Inscripción</h1>
+    
+    <div class="centro" style="margin-bottom: 25px;">
+    </div>
+
+    <div class="caja caja-derecha" style="background: transparent; box-shadow: none; padding: 0;">
+        
+        <form action="#" method="POST">
+            
+            <fieldset>
+                <legend>Datos Personales</legend>
+                
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+                
+                <label for="telefono">Teléfono / Celular:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 11 1234-5678">
+                
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento">
+            </fieldset>
+
+            <fieldset>
+                <legend>Tu Consulta</legend>
+                
+                <label for="motivo">Motivo de contacto:</label>
+                <select id="motivo" name="motivo">
+                    <option value="" disabled selected>Selecciona una opción...</option>
+                    <option value="inscripcion">Inscripción a entrenamientos</option>
+                    <option value="dudas">Consulta sobre reglas o posiciones</option>
+                    <option value="otro">Otro motivo</option>
+                </select>
+
+                <label>Experiencia previa en Handball:</label>
+                <div>
+                    <div>
+                        <input type="radio" id="exp_si" name="experiencia" value="si">
+                        <label for="exp_si">Sí, ya jugué antes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="exp_no" name="experiencia" value="no" checked>
+                        <label for="exp_no">No, quiero aprender</label>
+                    </div>
+                </div>
+
+                <label for="mensaje">Dejanos tu mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe aquí tu consulta o comentario..."></textarea>
+            </fieldset>
+
+            <div style="text-align: right;">
+                <button type="reset">Limpiar Datos</button>
+                <button type="submit">Enviar Mensaje</button>
+            </div>
+            
+        </form>
+    </div>
+
+
+    <div class="centro" style="margin-top: 30px;">
+        <a href="index.html"><button class="btn">Volver al Inicio</button></a>
+    </div>
+
+    <footer>
+        <p>Página realizada por Sofia Parats</p>
+    </footer>
+
+</body>
+</html>
